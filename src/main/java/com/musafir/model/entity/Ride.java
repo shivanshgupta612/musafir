@@ -1,5 +1,7 @@
 package com.musafir.model.entity;
 
+import com.musafir.model.enums.DriverStatus;
+import com.musafir.model.enums.RideStatus;
 import com.musafir.model.value.Location;
 import jakarta.persistence.*;
 import lombok.*;
@@ -33,12 +35,16 @@ public class Ride {
     @Column(nullable = false)
     private Long fare;
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private RideStatus status = RideStatus.REQUESTED;
+
     @ManyToOne
     @JoinColumn(name = "driver_id")
-    Driver driver;
+    private Driver driver;
 
     @ManyToOne
     @JoinColumn(name = "rider_id", nullable = false)
-    Rider rider;
+    private Rider rider;
 
 }
