@@ -30,6 +30,6 @@ public class Driver {
     @Column
     private Double rating;
 
-    @Column
+    @OneToOne(mappedBy = "driver", cascade = CascadeType.ALL)
     private Vehicle vehicle;
 }

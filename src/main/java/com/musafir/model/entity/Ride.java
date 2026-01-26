@@ -16,19 +16,29 @@ public class Ride {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name="lat", column=@Column(name="source_lat")),
+            @AttributeOverride(name="lon", column=@Column(name="source_lon"))
+    })
     private Location source;
 
-    @Column(nullable = false)
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name="lat", column=@Column(name="destination_lat")),
+            @AttributeOverride(name="lon", column=@Column(name="destination_lon"))
+    })
     private Location destination;
 
     @Column(nullable = false)
     private Long fare;
 
-    @Column(nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "driver_id")
     Driver driver;
 
-    @Column(nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "rider_id", nullable = false)
     Rider rider;
 
 }

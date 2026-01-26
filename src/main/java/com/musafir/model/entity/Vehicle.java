@@ -23,6 +23,7 @@ public class Vehicle {
     @Column(nullable = false)
     private VehicleType vehicleType;
 
-    @Column(nullable = false)
+    @OneToOne
+    @JoinColumn(name="driver_id", nullable = false, unique = true)
     private Driver driver;
 }
