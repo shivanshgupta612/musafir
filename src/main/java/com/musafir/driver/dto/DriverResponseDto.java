@@ -1,7 +1,7 @@
 package com.musafir.driver.dto;
 
-import com.musafir.model.enums.DriverStatus;
-import com.musafir.model.enums.VehicleType;
+import com.musafir.common.enums.DriverStatus;
+import com.musafir.common.enums.VehicleType;
 
 public record DriverResponseDto(
         Long id,

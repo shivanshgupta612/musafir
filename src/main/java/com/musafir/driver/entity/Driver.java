@@ -1,7 +1,7 @@
 package com.musafir.driver.entity;
 
-import com.musafir.model.entity.Vehicle;
-import com.musafir.model.enums.DriverStatus;
+import com.musafir.driver.entity.Vehicle;
+import com.musafir.common.enums.DriverStatus;
 import jakarta.persistence.*;
 import lombok.*;
 

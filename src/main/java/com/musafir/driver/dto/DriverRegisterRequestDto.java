@@ -1,6 +1,6 @@
 package com.musafir.driver.dto;
 
-import com.musafir.model.enums.VehicleType;
+import com.musafir.common.enums.VehicleType;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 

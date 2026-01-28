@@ -1,7 +1,7 @@
 package com.musafir.driver.entity;
 
-import com.musafir.model.entity.Driver;
-import com.musafir.model.enums.VehicleType;
+import com.musafir.common.enums.VehicleType;
+
 import jakarta.persistence.*;
 import lombok.*;
 

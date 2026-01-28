@@ -1,4 +1,4 @@
-package com.musafir.model.enums;
+package com.musafir.common.enums;
 
 public enum RideStatus {
     REQUESTED,

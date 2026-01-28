@@ -1,4 +1,4 @@
-package com.musafir.model.value;
+package com.musafir.common.vo;
 
 import jakarta.persistence.Embeddable;
 
