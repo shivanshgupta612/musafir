@@ -1,6 +1,6 @@
 package com.musafir.ride.dto;
 
-import com.musafir.model.enums.RideStatus;
+import com.musafir.common.enums.RideStatus;
 
 public record RideResponseDto(
 
