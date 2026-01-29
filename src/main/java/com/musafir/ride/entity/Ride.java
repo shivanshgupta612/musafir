@@ -1,9 +1,9 @@
 package com.musafir.ride.entity;
 
-import com.musafir.model.entity.Driver;
-import com.musafir.model.entity.Rider;
-import com.musafir.model.enums.RideStatus;
-import com.musafir.model.value.Location;
+import com.musafir.driver.entity.Driver;
+import com.musafir.rider.entity.Rider;
+import com.musafir.common.enums.RideStatus;
+import com.musafir.common.vo.Location;
 import jakarta.persistence.*;
 import lombok.*;
 
