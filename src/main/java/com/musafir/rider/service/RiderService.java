@@ -30,10 +30,18 @@ public class RiderService {
     }
 
 //
-    public Rider findRiderByPhone(String phone){
-        return riderRepository.findByPhone(phone)
-                .orElseThrow(()->new RuntimeException("Rider not found"));
+    public RiderResponseDto getRider(Long riderId) {
+
+        Rider rider = riderRepository.findById(riderId)
+                .orElseThrow(() -> new BusinessException("Rider not found"));
+
+        return new RiderResponseDto(
+                rider.getId(),
+                rider.getName(),
+                rider.getPhone()
+        );
     }
+
 
     @Transactional
     public RiderResponseDto updateRider(UpdateRiderInfoDto request) {
