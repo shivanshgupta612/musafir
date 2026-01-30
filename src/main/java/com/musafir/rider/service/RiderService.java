@@ -42,6 +42,11 @@ public class RiderService {
         );
     }
 
+    public Rider findRiderById(Long riderId){
+        return riderRepository.findById(riderId)
+                .orElseThrow(() -> new BusinessException("Rider not found"));
+    }
+
 
     @Transactional
     public RiderResponseDto updateRider(UpdateRiderInfoDto request) {
